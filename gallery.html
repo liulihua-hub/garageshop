@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a43">
+    <meta
+      name="description"
+      content="Explore recent garage door projects and installation work by MSW Garage Door in Windsor, Ontario."
+    >
+    <title>Gallery | MSW Garage Door</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --navy: #102a43;
+        --navy-deep: #0c2034;
+        --ink: #172e42;
+        --muted: #647789;
+        --cream: #f7f6f2;
+        --white: #fff;
+        --gold: #d7a452;
+        --line: #e2e8eb;
+        --font-body: "DM Sans", sans-serif;
+        --font-display: "Manrope", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+      a { color: inherit; }
+      img { max-width: 100%; display: block; }
+      .container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+      .site-header {
+        position: relative;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.96);
+        border-bottom: 1px solid rgba(16, 42, 67, 0.08);
+        backdrop-filter: blur(8px);
+      }
+      .header-inner,
+      .main-nav,
+      .brand,
+      .gallery-hero-actions {
+        display: flex;
+        align-items: center;
+      }
+      .header-inner {
+        min-height: 88px;
+        justify-content: space-between;
+      }
+      .brand {
+        gap: 10px;
+        text-decoration: none;
+      }
+      .brand-mark {
+        display: grid;
+        width: 43px;
+        height: 43px;
+        place-items: center;
+        color: var(--navy);
+      }
+      .brand-mark svg { width: 100%; }
+      .brand-copy {
+        display: grid;
+        line-height: 1;
+      }
+      .brand-copy strong {
+        font-family: var(--font-display);
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: .06em;
+      }
+      .brand-copy span {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .17em;
+      }
+      .main-nav {
+        gap: 34px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .main-nav a {
+        text-decoration: none;
+        transition: color .2s ease, background .2s ease;
+      }
+      .main-nav a:hover { color: #b57d2d; }
+      .main-nav .nav-cta {
+        padding: 12px 17px;
+        border: 1px solid #d5dee4;
+        border-radius: 5px;
+        color: var(--navy);
+      }
+      .main-nav .nav-cta:hover {
+        border-color: var(--navy);
+        background: var(--navy);
+        color: var(--white);
+      }
+      .page-main {
+        padding: 64px 0 80px;
+      }
+      .gallery-hero {
+        margin-bottom: 42px;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        color: #5d7080;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .13em;
+        text-transform: uppercase;
+      }
+      .eyebrow-line {
+        width: 24px;
+        height: 2px;
+        background: var(--gold);
+      }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, h3 {
+        font-family: var(--font-display);
+      }
+      h1 {
+        margin-bottom: 18px;
+        color: var(--navy);
+        font-size: clamp(38px, 5vw, 62px);
+        line-height: 1.08;
+        letter-spacing: -.055em;
+      }
+      h1 span { color: #80939f; font-weight: 500; }
+      .gallery-intro {
+        max-width: 700px;
+        margin-bottom: 0;
+        color: #586e7e;
+        font-size: 17px;
+      }
+      .gallery-hero-actions {
+        gap: 18px;
+        margin-top: 26px;
+        flex-wrap: wrap;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 19px;
+        padding: 0 19px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform .2s ease, background .2s ease;
+      }
+      .button:hover { transform: translateY(-2px); }
+      .button-primary {
+        background: var(--navy);
+        color: var(--white);
+      }
+      .button-primary:hover { background: #1c3e59; }
+      .text-link {
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+      }
+      .gallery-card {
+        overflow: hidden;
+        border: 1px solid rgba(16, 42, 67, 0.08);
+        border-radius: 16px;
+        background: var(--white);
+        box-shadow: 0 14px 30px rgba(16, 42, 67, 0.04);
+      }
+      .gallery-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        transition: transform .3s ease;
+      }
+      .gallery-card:hover img { transform: scale(1.03); }
+      .gallery-card figcaption {
+        padding: 14px 16px 18px;
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+      }
+      @media (max-width: 720px) {
+        .header-inner {
+          flex-direction: column;
+          justify-content: center;
+          gap: 12px;
+          padding: 16px 0;
+        }
+        .main-nav {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="MSW Garage Door home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 42 42" fill="none"><path d="M5 18.5 21 7l16 11.5V36H5V18.5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 22h18M12 27h18M12 32h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </span>
+          <span class="brand-copy"><strong>MSW</strong><span>GARAGE DOOR</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a class="nav-cta" href="index.html#contact">Get an estimate <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="container">
+        <section class="gallery-hero" aria-labelledby="gallery-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Recent work</p>
+          <h1 id="gallery-heading">A look at our <span>previous projects</span>.</h1>
+          <p class="gallery-intro">From clean modern upgrades to dependable replacements, here are some of the garage doors and installations we’ve completed for homeowners across Windsor and nearby communities.</p>
+          <div class="gallery-hero-actions">
+            <a class="button button-primary" href="index.html#contact">Request a quote <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="index.html">Back to home <span aria-hidden="true">↓</span></a>
+          </div>
+        </section>
+
+        <section aria-label="Garage door gallery">
+          <div id="gallery-grid" class="gallery-grid"></div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      const images = [
+        { src: 'Gallery/GarageDoor_01.jpg', alt: 'Garage door installation project 1' },
+        { src: 'Gallery/GarageDoor_04.jpg', alt: 'Garage door installation project 2' },
+        { src: 'Gallery/GarageDoor_10.jpg', alt: 'Garage door installation project 3' },
+        { src: 'Gallery/GarageDoor_Nov29_2021_A.jpg', alt: 'Garage door installation project 4' }
+      ];
+
+      const galleryGrid = document.getElementById('gallery-grid');
+
+      images.forEach((image, index) => {
+        const figure = document.createElement('figure');
+        figure.className = 'gallery-card';
+        figure.innerHTML = `
+          <img src="${image.src}" alt="${image.alt}" loading="lazy">
+          <figcaption>Project ${index + 1}</figcaption>
+        `;
+        galleryGrid.appendChild(figure);
+      });
+    </script>
+  </body>
+</html>
