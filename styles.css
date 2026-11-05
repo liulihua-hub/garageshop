@@ -63,6 +63,7 @@ a {
 }
 
 .header-inner,
+.header-brand-group,
 .main-nav,
 .brand,
 .hero-actions,
@@ -78,9 +79,25 @@ a {
   justify-content: space-between;
 }
 
+.header-brand-group {
+  gap: 20px;
+}
+
 .brand {
   gap: 10px;
   text-decoration: none;
+}
+
+.header-phone {
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-phone:hover {
+  color: #b57d2d;
 }
 
 .brand-mark {
@@ -1018,6 +1035,14 @@ h2 {
   .brand-mark {
     width: 36px;
     height: 36px;
+  }
+
+  .header-brand-group {
+    gap: 12px;
+  }
+
+  .header-phone {
+    font-size: 12px;
   }
 
   .brand-copy strong {
