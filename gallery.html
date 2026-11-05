@@ -51,6 +51,7 @@
         backdrop-filter: blur(8px);
       }
       .header-inner,
+      .header-brand-group,
       .main-nav,
       .brand,
       .gallery-hero-actions {
@@ -61,10 +62,21 @@
         min-height: 88px;
         justify-content: space-between;
       }
+      .header-brand-group {
+        gap: 20px;
+      }
       .brand {
         gap: 10px;
         text-decoration: none;
       }
+      .header-phone {
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .header-phone:hover { color: #b57d2d; }
       .brand-mark {
         display: grid;
         width: 43px;
@@ -272,12 +284,15 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="MSW Garage Door home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 42 42" fill="none"><path d="M5 18.5 21 7l16 11.5V36H5V18.5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 22h18M12 27h18M12 32h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </span>
-          <span class="brand-copy"><strong>MSW</strong><span>GARAGE DOOR</span></span>
-        </a>
+        <div class="header-brand-group">
+          <a class="brand" href="index.html" aria-label="MSW Garage Door home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 42 42" fill="none"><path d="M5 18.5 21 7l16 11.5V36H5V18.5Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 22h18M12 27h18M12 32h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </span>
+            <span class="brand-copy"><strong>MSW</strong><span>GARAGE DOOR</span></span>
+          </a>
+          <a class="header-phone" href="tel:+12263509488">CALL ME: 226-350-9488</a>
+        </div>
 
         <nav class="main-nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
